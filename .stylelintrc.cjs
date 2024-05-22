@@ -24,6 +24,7 @@ module.exports = {
     'selector-class-pattern': null,
     'color-function-notation': null,
     'no-descending-specificity': null,
-    'font-family-no-missing-generic-family-keyword': null
+    'font-family-no-missing-generic-family-keyword': null,
+    'scss/at-rule-no-unknown': null
   }
 }

@@ -1,20 +1,10 @@
 import presetRemToPx from '@unocss/preset-rem-to-px'
-import {
-  defineConfig,
-  presetAttributify,
-  presetUno,
-  transformerVariantGroup,
-  presetIcons
-} from 'unocss'
+import transformerDirective from '@unocss/transformer-directives'
+import { defineConfig, presetAttributify, presetUno, transformerVariantGroup } from 'unocss'
 
 export default defineConfig({
-  presets: [
-    presetAttributify(),
-    presetUno(),
-    presetRemToPx({ baseFontSize: 4 }),
-    presetIcons({ scale: 1.2, warn: true })
-  ],
-  transformers: [transformerVariantGroup()],
+  presets: [presetAttributify(), presetUno(), presetRemToPx({ baseFontSize: 4 })],
+  transformers: [transformerVariantGroup(), transformerDirective()],
   rules: [],
   shortcuts: [
     {
